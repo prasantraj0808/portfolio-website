@@ -7,7 +7,7 @@ admin.site.site_title="Welcome to prasant's dashboard"
 admin.site.index_title="welcome to this portal"
 
 urlpatterns = [
-   
+    path('admin/',admin.site.urls),
     path('',views.home,name='home'),
     path('about',views.about,name='about'),
     path('projects',views.projects,name='projects'),

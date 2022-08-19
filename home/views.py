@@ -1,5 +1,6 @@
 from multiprocessing import context
 from django.shortcuts import render,HttpResponse
+from home import models
 from home.models import Contact
 def home(request):
    # return HttpResponse("this is my home page(/)")
@@ -22,7 +23,7 @@ def contact(request):
        phone=request.POST['phone']
        desc=request.POST['desc']
        ins=Contact(name=name,email=email,phone=phone,desc=desc)
-       print(name,email,phone,desc)
+       #print(name,email,phone,desc)
        ins.save()
        print("hello")
    return render(request,'contact.html')
